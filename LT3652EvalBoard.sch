@@ -35,9 +35,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Crappy LT3652 Breakout"
-Date "2016-02-16"
-Rev "0.1"
+Title "LT3652 Evaluation Board"
+Date "2016-03-15"
+Rev "0.3"
 Comp "Malcolm Spiteri"
 Comment1 ""
 Comment2 ""
