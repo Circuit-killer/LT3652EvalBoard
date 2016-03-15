@@ -1,0 +1,11 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP D_Schottky_Small_ZLLS500
+D Diode Schottky
+$ENDCMP
+#
+$CMP D_Small_ZLLS500
+D Diode
+$ENDCMP
+#
+#End Doc Library
