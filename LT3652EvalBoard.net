@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/My Data/Projects/LT3652EvalBoard/LT3652EvalBoard.sch")
-    (date "15/03/2016 20:05:43")
+    (date "15/03/2016 23:14:06")
     (tool "Eeschema 4.0.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -17,7 +17,7 @@
   (components
     (comp (ref U1)
       (value LT3652)
-      (footprint ms_lt3652:LT3652MSE_HandSoldering)
+      (footprint ms_lt3652:LT3652MSE)
       (libsource (lib w_analog) (part LT3652))
       (sheetpath (names /) (tstamps /))
       (tstamp 56C21ABA))
@@ -444,14 +444,14 @@
         (pin (num 4) (name GND) (type power_in))
         (pin (num 5) (name shield) (type passive)))))
   (libraries
-    (library (logical conn)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
-    (library (logical LT3652EvalBoard-cache)
-      (uri "C:\\My Data\\Projects\\LT3652EvalBoard\\LT3652EvalBoard-cache.lib"))
     (library (logical device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
     (library (logical w_analog)
-      (uri "C:\\My Data\\Projects\\kicad_libs\\library\\w_analog.lib")))
+      (uri "C:\\My Data\\Projects\\kicad_libs\\library\\w_analog.lib"))
+    (library (logical conn)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
+    (library (logical LT3652EvalBoard-cache)
+      (uri "C:\\My Data\\Projects\\LT3652EvalBoard\\LT3652EvalBoard-cache.lib")))
   (nets
     (net (code 1) (name "Net-(JP2-Pad3)")
       (node (ref JP2) (pin 3))

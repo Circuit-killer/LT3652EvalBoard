@@ -35,9 +35,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Crappy LT3652 Breakout"
-Date "2016-02-16"
-Rev "0.1"
+Title "LT3652 Evaluation Board"
+Date "2016-03-15"
+Rev "0.3"
 Comp "Malcolm Spiteri"
 Comment1 ""
 Comment2 ""
@@ -50,7 +50,7 @@ U 1 1 56C21ABA
 P 5500 3450
 F 0 "U1" H 5500 4100 60  0000 C CNN
 F 1 "LT3652" H 5500 4000 60  0000 C CNN
-F 2 "ms_lt3652:LT3652MSE_HandSoldering" H 5500 3450 60  0001 C CNN
+F 2 "ms_lt3652:LT3652MSE" H 5500 3450 60  0001 C CNN
 F 3 "" H 5500 3450 60  0000 C CNN
 	1    5500 3450
 	1    0    0    -1  
