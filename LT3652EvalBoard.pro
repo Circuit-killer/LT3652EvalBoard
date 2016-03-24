@@ -1,4 +1,4 @@
-update=16/03/2016 00:07:45
+update=23/03/2016 23:23:17
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,4 @@ LibName28=contrib
 LibName29=valves
 LibName30=w_analog
 LibName31=ESP8266
+LibName32=hm-10
