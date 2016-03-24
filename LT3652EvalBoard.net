@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "C:/My Data/Projects/LT3652EvalBoard/LT3652EvalBoard.sch")
-    (date "24/03/2016 07:29:16")
+    (date "24/03/2016 22:35:43")
     (tool "Eeschema 4.0.1-stable")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -167,7 +167,7 @@
       (tstamp 56CF8C9B))
     (comp (ref Rsense1)
       (value 250mO)
-      (footprint Capacitors_SMD:C_0805_HandSoldering)
+      (footprint Resistors_SMD:R_0805_HandSoldering)
       (libsource (lib device) (part R_Small))
       (sheetpath (names /) (tstamps /))
       (tstamp 56D0804A))
@@ -451,12 +451,12 @@
   (libraries
     (library (logical w_analog)
       (uri "C:\\My Data\\Projects\\kicad_libs\\library\\w_analog.lib"))
-    (library (logical LT3652EvalBoard-cache)
-      (uri "C:\\My Data\\Projects\\LT3652EvalBoard\\LT3652EvalBoard-cache.lib"))
     (library (logical device)
       (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\device.lib"))
     (library (logical conn)
-      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib")))
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library\\conn.lib"))
+    (library (logical LT3652EvalBoard-cache)
+      (uri "C:\\My Data\\Projects\\LT3652EvalBoard\\LT3652EvalBoard-cache.lib")))
   (nets
     (net (code 1) (name "Net-(Rfb1-Pad2)")
       (node (ref Rfb1) (pin 2))
