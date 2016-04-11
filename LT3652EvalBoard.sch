@@ -305,7 +305,7 @@ F 1 "JST PH" V 8005 4010 50  0000 C CNN
 F 2 "w_conn_jst-ph:s2b-ph-kl" H 7905 4010 50  0001 C CNN
 F 3 "" H 7905 4010 50  0000 C CNN
 	1    7905 4010
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L INDUCTOR_SMALL Lsw1
@@ -427,7 +427,7 @@ F 1 "JST PH" V 8890 2975 50  0000 C CNN
 F 2 "w_conn_jst-ph:s2b-ph-kl" H 8790 2975 50  0001 C CNN
 F 3 "" H 8790 2975 50  0000 C CNN
 	1    8790 2975
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L GND #PWR011
@@ -562,7 +562,7 @@ F 1 "JST PH" V 4775 865 50  0000 C CNN
 F 2 "w_conn_jst-ph:b2b-ph-kl" H 4675 865 50  0001 C CNN
 F 3 "" H 4675 865 50  0000 C CNN
 	1    4675 865 
-	0    1    -1   0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L D_Schottky_Small_ZLLS500 Dbat1
@@ -606,7 +606,7 @@ F 1 "JST PH" V 4530 1810 50  0000 C CNN
 F 2 "w_conn_jst-ph:b2b-ph-kl" H 4430 1810 50  0001 C CNN
 F 3 "" H 4430 1810 50  0000 C CNN
 	1    4430 1810
-	0    1    -1   0   
+	0    -1   -1   0   
 $EndComp
 Text Label 2515 4740 3    60   ~ 0
 VIN
@@ -710,7 +710,7 @@ Wire Wire Line
 Wire Wire Line
 	7630 4060 7705 4060
 Wire Wire Line
-	5950 3050 5950 2750
+	5950 2655 5950 3050
 Wire Wire Line
 	6100 2400 6100 2875
 Connection ~ 6100 2750
@@ -927,7 +927,7 @@ F 1 "JST PH" V 5405 1645 50  0000 C CNN
 F 2 "w_conn_jst-ph:b2b-ph-kl" H 5305 1645 50  0001 C CNN
 F 3 "" H 5305 1645 50  0000 C CNN
 	1    5305 1645
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5105 1695 4925 1695
@@ -942,4 +942,16 @@ Wire Wire Line
 Wire Wire Line
 	4625 1065 4625 2375
 Connection ~ 4625 2375
+$Comp
+L TEST_1P Wsw0
+U 1 1 57057E28
+P 5950 2655
+F 0 "Wsw0" H 5950 2850 50  0000 C CNN
+F 1 "TEST_1P" H 5950 2855 50  0001 C CNN
+F 2 "ms_pcb_test_points:HARWIN_S1751-46" H 6150 2655 50  0001 C CNN
+F 3 "" H 6150 2655 50  0000 C CNN
+	1    5950 2655
+	1    0    0    -1  
+$EndComp
+Connection ~ 5950 2750
 $EndSCHEMATC
