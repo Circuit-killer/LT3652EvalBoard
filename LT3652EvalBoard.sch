@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:LT3652EvalBoard-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -38,8 +39,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "LT3652 Evaluation Board"
-Date "2016-03-15"
-Rev "0.3"
+Date "2017-02-27"
+Rev "0.4"
 Comp "Malcolm Spiteri"
 Comment1 ""
 Comment2 ""
@@ -150,12 +151,12 @@ $EndComp
 $Comp
 L GND #PWR03
 U 1 1 56C2981A
-P 4725 2425
-F 0 "#PWR03" H 4725 2175 50  0001 C CNN
-F 1 "GND" H 4725 2275 50  0000 C CNN
-F 2 "" H 4725 2425 50  0000 C CNN
-F 3 "" H 4725 2425 50  0000 C CNN
-	1    4725 2425
+P 4675 2430
+F 0 "#PWR03" H 4675 2180 50  0001 C CNN
+F 1 "GND" H 4675 2280 50  0000 C CNN
+F 2 "" H 4675 2430 50  0000 C CNN
+F 3 "" H 4675 2430 50  0000 C CNN
+	1    4675 2430
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -203,7 +204,7 @@ F 3 "" H 6100 4025 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT RV1
+L POT-RESCUE-LT3652EvalBoard RV1
 U 1 1 56C645D0
 P 3625 3200
 F 0 "RV1" H 3625 3100 50  0000 C CNN
@@ -225,7 +226,7 @@ F 3 "" H 3625 3880 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT RV2
+L POT-RESCUE-LT3652EvalBoard RV2
 U 1 1 56C6527D
 P 3950 3500
 F 0 "RV2" H 3950 3400 50  0000 C CNN
@@ -459,8 +460,8 @@ $Comp
 L R_Small Rsense1
 U 1 1 56D0804A
 P 6650 3400
-F 0 "Rsense1" H 6680 3420 50  0000 L CNN
-F 1 "250mO" H 6680 3360 50  0000 L CNN
+F 0 "Rsense1" V 6715 3260 43  0000 L CNN
+F 1 "250mO" V 6785 3265 43  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" H 6650 3400 50  0001 C CNN
 F 3 "" H 6650 3400 50  0000 C CNN
 	1    6650 3400
@@ -554,17 +555,6 @@ F 3 "" H 8280 3045 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X02 Pslr3
-U 1 1 56D5EAF0
-P 4675 865
-F 0 "Pslr3" H 4675 1015 50  0000 C CNN
-F 1 "JST PH" V 4775 865 50  0000 C CNN
-F 2 "w_conn_jst-ph:b2b-ph-kl" H 4675 865 50  0001 C CNN
-F 3 "" H 4675 865 50  0000 C CNN
-	1    4675 865 
-	0    -1   -1   0   
-$EndComp
-$Comp
 L D_Schottky_Small_ZLLS500 Dbat1
 U 1 1 56D71C0A
 P 7525 3550
@@ -600,12 +590,12 @@ $EndComp
 $Comp
 L CONN_01X02 Pslr2
 U 1 1 56D8B1A1
-P 4430 1810
-F 0 "Pslr2" H 4430 1960 50  0000 C CNN
-F 1 "JST PH" V 4530 1810 50  0000 C CNN
-F 2 "w_conn_jst-ph:b2b-ph-kl" H 4430 1810 50  0001 C CNN
-F 3 "" H 4430 1810 50  0000 C CNN
-	1    4430 1810
+P 4430 1485
+F 0 "Pslr2" H 4430 1635 50  0000 C CNN
+F 1 "JST PH" V 4530 1485 50  0000 C CNN
+F 2 "w_conn_jst-ph:b2b-ph-kl" H 4430 1485 50  0001 C CNN
+F 3 "" H 4430 1485 50  0000 C CNN
+	1    4430 1485
 	0    -1   -1   0   
 $EndComp
 Text Label 2515 4740 3    60   ~ 0
@@ -644,15 +634,37 @@ F 3 "" H 5740 2015 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L D_Schottky_Small_ZLLS500 Dvin2
-U 1 1 56F3429B
-P 4480 2170
-F 0 "Dvin2" H 4430 2250 50  0000 L CNN
-F 1 "ZLLS500" H 4330 2080 50  0000 L CNN
-F 2 "ms_diodes:DIODES_INC_ZLLS500" V 4480 2170 50  0001 C CNN
-F 3 "" V 4480 2170 50  0000 C CNN
-	1    4480 2170
+L CONN_01X02 Pslr1
+U 1 1 56F3F4BC
+P 4875 1480
+F 0 "Pslr1" H 4875 1630 50  0000 C CNN
+F 1 "JST PH" V 4975 1480 50  0000 C CNN
+F 2 "w_conn_jst-ph:b2b-ph-kl" H 4875 1480 50  0001 C CNN
+F 3 "" H 4875 1480 50  0000 C CNN
+	1    4875 1480
 	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST_1P Wsw2
+U 1 1 57057E28
+P 5950 2655
+F 0 "Wsw2" H 5950 2925 50  0000 C CNN
+F 1 "TEST_1P" H 5950 2855 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6150 2655 50  0001 C CNN
+F 3 "" H 6150 2655 50  0000 C CNN
+	1    5950 2655
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper_NO_Small JP4
+U 1 1 58B30013
+P 4645 1970
+F 0 "JP4" H 4645 2050 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 4655 1910 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4645 1970 50  0001 C CNN
+F 3 "" H 4645 1970 50  0000 C CNN
+	1    4645 1970
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	5800 4175 5800 4450
@@ -661,16 +673,8 @@ Wire Wire Line
 Wire Wire Line
 	4250 2880 4250 3050
 Wire Wire Line
-	4725 1645 4725 2425
-Wire Wire Line
 	4250 2580 4250 2375
-Wire Wire Line
-	4250 2375 4725 2375
-Connection ~ 4725 2375
 Connection ~ 4925 3050
-Wire Wire Line
-	4925 2375 5050 2375
-Connection ~ 4925 2375
 Wire Wire Line
 	5175 4150 5175 4100
 Wire Wire Line
@@ -853,8 +857,6 @@ Wire Wire Line
 Wire Wire Line
 	4250 3050 5050 3050
 Wire Wire Line
-	4925 1695 4925 2490
-Wire Wire Line
 	8280 3145 8280 3160
 Wire Wire Line
 	8280 3160 8540 3160
@@ -866,8 +868,6 @@ Wire Wire Line
 	5950 3550 7425 3550
 Wire Wire Line
 	6100 3925 6100 3550
-Wire Wire Line
-	4480 2850 5385 2850
 Wire Wire Line
 	5385 2850 5385 2140
 Connection ~ 4925 2850
@@ -884,7 +884,7 @@ Wire Wire Line
 	7880 2675 7625 2675
 Connection ~ 7625 2675
 Wire Wire Line
-	4380 2010 4380 2375
+	4380 1685 4380 2375
 Connection ~ 4380 2375
 Wire Wire Line
 	3625 3720 3625 3880
@@ -902,56 +902,58 @@ Wire Wire Line
 Wire Wire Line
 	5540 2015 5540 2140
 Connection ~ 5540 2140
-Wire Wire Line
-	4480 2270 4480 2850
 Connection ~ 4925 2950
+Connection ~ 5950 2750
 Wire Wire Line
-	4480 2010 4480 2070
+	4925 1680 4925 2490
+Wire Wire Line
+	4250 2375 4825 2375
+Wire Wire Line
+	4675 2375 4675 2430
+Wire Wire Line
+	5050 2375 4925 2375
+Connection ~ 4925 2375
+Connection ~ 4675 2375
+Wire Wire Line
+	5385 2850 4925 2850
+Wire Wire Line
+	4545 1970 4480 1970
+Wire Wire Line
+	4480 1970 4480 1685
+Wire Wire Line
+	4745 1970 4825 1970
+Wire Wire Line
+	4825 1680 4825 2015
 $Comp
-L JUMPER3 JPnl1
-U 1 1 56F3EE86
-P 4725 1395
-F 0 "JPnl1" H 4775 1295 50  0000 L CNN
-F 1 "JUMPER3" H 4725 1495 50  0000 C BNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 4725 1395 50  0001 C CNN
-F 3 "" H 4725 1395 50  0000 C CNN
-	1    4725 1395
+L Jumper_NC_Small JP5
+U 1 1 58B31A07
+P 4825 2115
+F 0 "JP5" H 4825 2195 50  0000 C CNN
+F 1 "Jumper_NC_Small" H 4835 2055 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4825 2115 50  0001 C CNN
+F 3 "" H 4825 2115 50  0000 C CNN
+	1    4825 2115
 	0    -1   -1   0   
 $EndComp
+Connection ~ 4825 1970
+Wire Wire Line
+	4825 2375 4825 2215
 $Comp
-L CONN_01X02 Pslr1
-U 1 1 56F3F4BC
-P 5305 1645
-F 0 "Pslr1" H 5305 1795 50  0000 C CNN
-F 1 "JST PH" V 5405 1645 50  0000 C CNN
-F 2 "w_conn_jst-ph:b2b-ph-kl" H 5305 1645 50  0001 C CNN
-F 3 "" H 5305 1645 50  0000 C CNN
-	1    5305 1645
-	1    0    0    -1  
+L TEST_1P Wbst1
+U 1 1 58B53853
+P 6410 3035
+F 0 "Wbst1" H 6410 3305 50  0000 C CNN
+F 1 "TEST_1P" H 6410 3235 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6610 3035 50  0001 C CNN
+F 3 "" H 6610 3035 50  0000 C CNN
+	1    6410 3035
+	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5105 1695 4925 1695
+	6410 3035 6135 3035
 Wire Wire Line
-	4825 1395 4925 1395
+	6135 3035 6135 3100
 Wire Wire Line
-	4925 1395 4925 1595
-Wire Wire Line
-	4925 1595 5105 1595
-Wire Wire Line
-	4725 1065 4725 1145
-Wire Wire Line
-	4625 1065 4625 2375
-Connection ~ 4625 2375
-$Comp
-L TEST_1P Wsw0
-U 1 1 57057E28
-P 5950 2655
-F 0 "Wsw0" H 5950 2850 50  0000 C CNN
-F 1 "TEST_1P" H 5950 2855 50  0001 C CNN
-F 2 "ms_pcb_test_points:HARWIN_S1751-46" H 6150 2655 50  0001 C CNN
-F 3 "" H 6150 2655 50  0000 C CNN
-	1    5950 2655
-	1    0    0    -1  
-$EndComp
-Connection ~ 5950 2750
+	6135 3100 6100 3100
+Connection ~ 6100 3100
 $EndSCHEMATC
